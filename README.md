@@ -32,6 +32,10 @@ We will set up Spinnaker and Tekton CD pipelines and compare which tool works be
   7. Create Demo: Successful CD
   8. Create Demo: Failing CD
 
+## Architecture
+  1.Spinnaker
+  ![image](https://user-images.githubusercontent.com/81319477/146949086-8906508b-e910-4176-b9d4-f307b8a83f21.png)
+
 ## Responsibilities:
   1. All
   2. Wagner
