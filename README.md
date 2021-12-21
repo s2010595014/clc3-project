@@ -5,7 +5,7 @@
 ## Project Description:
   - Implement a CD pipeline
   
-We will set up Spinnaker and Tekton CD pipelines and compare which tool works best for deploying an artifact into a three-stage environment. The pipeline should be triggered by a git commit to the main branch. The next step should be the construction of an container which is tested in a development stage. After successfully testing the implementation in the dev stage the container gets released into the producution stage. For the conversion from the dev stage to the development stage we will check which release strategies the tools provide and use the same strategy for each tool.
+We will set up Spinnaker and Tekton CD pipelines and compare which tool works best for deploying an artifact into a three-stage environment. The pipeline should be triggered by a git commit to the main branch. The next step should be the construction of a container which is tested in a development stage. After successfully testing the implementation in the dev stage the container gets released into the production stage. For the conversion from the dev stage to the production stage we will check which release strategies the tools provide and use the same strategy for each tool.
 
 ![image](https://user-images.githubusercontent.com/81319477/146958129-4aecda4a-e860-414d-a431-1a2034881d7e.png)
 
@@ -70,7 +70,7 @@ We will set up Spinnaker and Tekton CD pipelines and compare which tool works be
   Tektons pipeline architercture:
   ![image](https://user-images.githubusercontent.com/81319477/146953959-2adb5a0c-2869-4c0e-b2af-1cac8c625b56.png)
   
-  Tekton pipline flow diagram:
+  Tekton pipeline flow diagram:
   ![image](https://user-images.githubusercontent.com/81319477/146955366-12c96acb-1bea-45fc-a02b-8dee15328add.png)
   
   #### Steps
@@ -78,7 +78,7 @@ We will set up Spinnaker and Tekton CD pipelines and compare which tool works be
   A step is the smallest operation of the Tekton pipeline. It performs a
   specific function in CI/CD, such as managing workflow, compiling
   code, running the unit testing, building and pushing the Docker image,
-  and so on
+  and so on.
   
   #### Tasks
   
