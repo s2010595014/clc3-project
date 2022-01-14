@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Intake') {
+            steps {
+                echo 'Intake'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Release'
+            }
+        }
+    }
+}
