@@ -3,7 +3,7 @@ import sys
 from unittest import result
 import calc
 
-argnumers = len(sys.argv) -1
+argnumers = len(sys.argv) -1 
 
 if argnumbers == 2 :
     print("")

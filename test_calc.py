@@ -8,7 +8,7 @@ class TestCalc(unittest.TestCase):
 
 
 
-    def test_add_floats(self):
+    def test_add_floats(self): 
         result = calc.add2('10.5', 2)
         self.assertEqual(result, 12.5)
 
