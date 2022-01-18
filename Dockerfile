@@ -1,8 +1,16 @@
-# Pull in the layer of the base image: alpine:3.10.3
-FROM alpine:3.10.3
+FROM golang:1.13-alpine
 
-# Copy binary demo to the folder `/bin/`
-COPY demo /bin/demo
+# Set /src as working directory
+WORKDIR /src
 
-# Run the service demo when a container is launched
-CMD ["/bin/demo"]
+# Copy source code to working directory
+COPY main.go go.* ./
+
+# Build the GO app as myapp binary and move it to /usr/
+RUN CGO_ENABLED=0 go build -o /usr/myapp
+
+# Mark port for port publishing
+EXPOSE 8888
+
+# Run the service myapp when a container of this image is launched
+CMD ["/usr/myapp"]
