@@ -15,7 +15,7 @@ steps:
 images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:latest']
 availableSecrets:
   secretManager:
-  - versionName: projects/clc-work/secrets/DOCKER_PASSWORD_SECRET_NAME/versions/DOCKER_PASSWORD_SECRET_VERSION
+  - versionName: projects/clc-work/secrets/docker-password/versions/1
     env: 'PASSWORD'
-  - versionName: projects/clc-work/secrets/DOCKER_USERNAME_SECRET_NAME/versions/DOCKER_USERNAME_SECRET_VERSION
+  - versionName: projects/clc-work/secrets/docker-username/versions/1
     env: 'USERNAME'
