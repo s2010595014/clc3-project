@@ -3,4 +3,6 @@ steps:
   args: ['build', '-t', 'gcr.io/clc-work/app:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:latest']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/clc-work/app:latest', 'clcproject/app:latest']
 images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:latest']
