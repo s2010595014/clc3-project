@@ -8,7 +8,7 @@ steps:
   args: ['-c', 'docker login --username=$$USERNAME --password=$$PASSWORD']
   secretEnv: ['USERNAME', 'PASSWORD']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'clcproject/app:latest']
+  args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'clcproject/app:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: ['-c', 'docker push clcproject/app:$SHORT_SHA']
