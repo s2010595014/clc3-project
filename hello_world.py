@@ -4,6 +4,6 @@ from time import sleep
 # every 5 seconds forever.
 
 while True:
-    print("Show me what you got!")
+    print("I like what you got!")
     sleep(5)
  
