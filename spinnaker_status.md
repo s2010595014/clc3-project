@@ -5,6 +5,6 @@
 - Push Image to Google Cloud Registry
 - (PubSub message to Spinnaker Trigger)
 - alt.: wait after git commit
-- Deploy Image to Cluster
+- Deploy Image to Cluster test
 - Manual Judgement
-- Deploy Image to Cluster
+- Deploy Image to Cluster production
