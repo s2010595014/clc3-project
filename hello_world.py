@@ -4,7 +4,7 @@ from time import sleep
 # every 5 seconds forever.
 
 while True:
-    msg = "I like what you got!"
+    msg = "Hello World!"
     print(msg)
     sleep(5)
     
