@@ -14,7 +14,7 @@ steps:
   args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'clcproject/app:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: ['-c', 'docker push clcproject/app:$SHORT_SHA']
+  args: ['-c', 'docker push clcproject/app:dev']
 images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:dev']
 availableSecrets:
   secretManager:
