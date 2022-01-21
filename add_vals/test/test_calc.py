@@ -1,14 +1,14 @@
 import unittest
 import calc
+
+
 class TestCalc(unittest.TestCase):
 
     def test_add_integers(self):
-        result = calc.add2(1,2)
+        result = calc.add2(1, 2)
         self.assertEqual(result, 3)
 
-
-
-    def test_add_floats(self): 
+    def test_add_floats(self):
         result = calc.add2('10.5', 2)
         self.assertEqual(result, 12.5)
 
@@ -23,6 +23,7 @@ class TestCalc(unittest.TestCase):
     def test_add_string_and_number(self):
         result = calc.add2('abc', '5.5')
         self.assertEqual(result, 'abc5.5')
+
 
 if __name__ == '__main__':
     unittest.main()
