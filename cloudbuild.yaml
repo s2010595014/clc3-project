@@ -1,6 +1,6 @@
 steps:
-- name: python:3.7
-  args: [ "python","-m","unittest","discover","--verbose","-s","./add_vals/test/","-p","test_*.py" ]
+- name: python:3.8
+  args: [ "python","-m","unittest","discover","--verbose","-s","./add_vals/","-p","test_*.py" ]
   id: unittest
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/clc-work/app:$SHORT_SHA', '.']
