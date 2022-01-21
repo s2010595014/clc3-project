@@ -4,17 +4,22 @@ steps:
   id: unittest
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/clc-work/app:$SHORT_SHA', '.']
+  id: build-image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:dev']
+  id: tag-image
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: ['-c', 'docker login --username=$$USERNAME --password=$$PASSWORD']
   secretEnv: ['USERNAME', 'PASSWORD']
+  id: docker-login
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'clcproject/app:$SHORT_SHA']
+  id: tag-docker-image
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: ['-c', 'docker push clcproject/app:$SHORT_SHA']
+  id: push-image
 images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:dev']
 availableSecrets:
   secretManager:
