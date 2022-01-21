@@ -5,7 +5,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/clc-work/app:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:latest']
+  args: ['tag', 'gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:dev']
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: ['-c', 'docker login --username=$$USERNAME --password=$$PASSWORD']
@@ -15,7 +15,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: ['-c', 'docker push clcproject/app:$SHORT_SHA']
-images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:latest']
+images: ['gcr.io/clc-work/app:$SHORT_SHA', 'gcr.io/clc-work/app:dev']
 availableSecrets:
   secretManager:
   - versionName: projects/clc-work/secrets/docker-password/versions/1
