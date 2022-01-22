@@ -44,7 +44,7 @@ images:
 - [string, string, ...]
 ```
 
-##Build steps
+## Build steps
 A build step specifies an action that you want Cloud Build to perform. For each build step, Cloud Build executes a docker container as an instance of docker run. Build steps are analogous to commands in a script and provide you with the flexibility of executing arbitrary instructions in your build. If you can package a build tool into a container, Cloud Build can execute it as part of your build. By default, Cloud Build executes all steps of a build serially on the same machine. If you have steps that can run concurrently, use the waitFor option.
 
 You can include up to 100 build steps in your config file.
