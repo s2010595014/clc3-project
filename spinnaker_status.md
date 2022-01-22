@@ -43,15 +43,18 @@ hal config features edit --artifacts true
 ```  
   
 Now deploy Spinnaker to the Kubernetes cluster and and customize your installation.
+```
 # set the account to install spinnaker into
 $ACCOUNT=spinnaker-account
 # install spinnaker
 hal config deploy edit --type distributed --account-name $ACCOUNT
+```
   
   
 Spinnaker does not provide persistent Storage persistence storage so it needs to be set up
 Create another Service Account that includes permissions to edit Google Cloud Storage buckets and then enable GCS.
 
+```
 SERVICE_ACCOUNT_NAME=spinnaker-gcs-account
 SERVICE_ACCOUNT_DEST=~/.gcp/gcs-account.json
 # create service account
@@ -80,9 +83,11 @@ hal config storage gcs edit --project $PROJECT \
 hal config storage edit --type gcs
 # deploy all your changes
 hal deploy apply
+```
  
 
 For creating pipelines, Spinnaker needs the ability to connect to GCS to pull Helm charts, YAML files.
+```
 # service account from earlier
 SERVICE_ACCOUNT_DEST=~/.gcp/gcs-artifacts-account.json
 # artifact account name
@@ -95,10 +100,12 @@ hal config artifact gcs account add $ARTIFACT_ACCOUNT_NAME \
 hal config artifact gcs enable
 # deploy your changes
 hal deploy apply
+```
   
   
 Now Pipleines should be trigger builds whenever a Cloud Build was complete.
-  #!/usr/bin/env bash
+```
+#!/usr/bin/env bash
 
 echo "start editing cloud build"
 SERVICE_ACCOUNT_NAME=spinnaker-account
@@ -120,7 +127,7 @@ hal config pubsub google enable
 hal deploy apply
 
 echo "done editing cloud build"
-  
+ ``` 
   
 Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger pipelines.
   
