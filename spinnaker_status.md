@@ -6,6 +6,7 @@ A ready to use GKE Cluster
 ## Why Spinnaker?
 Spinnaker is the easiest way to release complicated pipelines with little-to-no engineering interaction. Originally built by Netflix, Spinnaker has grown to support multiple clouds and a variety of architectures. Where I feel Spinnaker shines though is it’s integration with Kubernetes.
 
+## Install options -> Halyard
 Install Options: Halyard vs Helm
 There are a few different ways to install Spinnaker, the recommended way being with Halyard, and other options including Helm and deployment manager.
 Halyard installs easily on your local machine and remotely connects to the cluster you are running Spinnaker. Now you can install, change settings, and manage your Spinnaker instance from your computer.
