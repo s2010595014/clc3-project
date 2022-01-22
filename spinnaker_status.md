@@ -8,7 +8,7 @@ Spinnaker is the easiest way to release complicated pipelines with little-to-no 
 
 ## Install options -> Halyard
 There are a few different ways to install Spinnaker, the recommended way being with Halyard, and other options including Helm and deployment manager.
-As Halyard was recommended this option is used.Halyard installs easily and remotely connects to the cluster you are running Spinnaker.
+As Halyard was recommended this option is used. Halyard installs easily and remotely connects to the cluster you are running Spinnaker.
 ```
 #get the lastest Halyard release
 curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
