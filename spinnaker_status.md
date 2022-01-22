@@ -96,7 +96,7 @@ hal deploy apply
 ```
  
 ## Add GCS Artifact Support
-For creating pipelines, Spinnaker needs the ability to connect to GCS to pull Helm charts, YAML files.
+For creating pipelines, Spinnaker needs the ability to connect to GCS to pull Helm charts and YAML files.
 ```
 # service account from earlier
 SERVICE_ACCOUNT_DEST=~/.gcp/gcs-artifacts-account.json
