@@ -8,7 +8,16 @@ Spinnaker is the easiest way to release complicated pipelines with little-to-no 
 
 ## Install options -> Halyard
 There are a few different ways to install Spinnaker, the recommended way being with Halyard, and other options including Helm and deployment manager.
-Halyard installs easily on your local machine and remotely connects to the cluster you are running Spinnaker. Now you can install, change settings, and manage your Spinnaker instance from your computer.
+As Halyard was recommended this option is used.Halyard installs easily and remotely connects to the cluster you are running Spinnaker.
+```
+#get the lastest Halyard release
+curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
+#start the installation
+sudo bash InstallHalyard.sh
+#Check whether Halyard was installed properly
+hal -v
+```
+After installation, you are able to change settings, and manage your Spinnaker instance from your computer.
 The first step after installing Halyard is to connect Halyard to your Kubernetes Cluster so you can install Spinnaker. GCP does require that you provide a Service Account to Halyard with the needed permissions to access your Cluster. To do this access GCP is needed,  and then must be provided to Halyard. 
 
 ```
