@@ -10,6 +10,7 @@ There are a few different ways to install Spinnaker, the recommended way being w
 Halyard installs easily on your local machine and remotely connects to the cluster you are running Spinnaker. Now you can install, change settings, and manage your Spinnaker instance from your computer.
 The first step after installing Halyard is to connect Halyard to your Kubernetes Cluster so you can install Spinnaker. GCP does require that you provide a Service Account to Halyard with the needed permissions to access your Cluster. To do this access GCP is needed,  and then must be provided to Halyard. 
 
+```
 # login into GCP
 gcloud auth login
 # set project id that your cluster belongs to
@@ -39,7 +40,7 @@ hal config provider kubernetes enable
 hal config provider kubernetes account add spinnaker-account --provider-version v2 --context ${CONTEXT}
 # finally enable artifacts
 hal config features edit --artifacts true
-  
+```  
   
 Now deploy Spinnaker to the Kubernetes cluster and and customize your installation.
 # set the account to install spinnaker into
