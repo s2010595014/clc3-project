@@ -113,7 +113,7 @@ hal deploy apply
 ```
   
 ## Google Pub/Sub Trigger with Google Cloud Build  
-Now Pipleines should be trigger builds whenever a Cloud Build was complete.
+Now Pipleines should trigger builds whenever a Cloud Build was complete.
 ```
 #!/usr/bin/env bash
 
