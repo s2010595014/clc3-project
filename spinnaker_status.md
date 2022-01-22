@@ -1,8 +1,9 @@
 #Setup 
 
-Requirements GKE Cluster
+## Requirements
+GKE Cluster
 
-Why Spinnaker?
+## Why Spinnaker?
 Spinnaker is the easiest way to release complicated pipelines with little-to-no engineering interaction. Originally built by Netflix, Spinnaker has grown to support multiple clouds and a variety of architectures. Where I feel Spinnaker shines though is it’s integration with Kubernetes.
 
 Install Options: Halyard vs Helm
@@ -50,7 +51,7 @@ $ACCOUNT=spinnaker-account
 hal config deploy edit --type distributed --account-name $ACCOUNT
 ```
   
-  
+## Enable Google Cloud Storage  
 Spinnaker does not provide persistent Storage persistence storage so it needs to be set up
 Create another Service Account that includes permissions to edit Google Cloud Storage buckets and then enable GCS.
 
@@ -85,7 +86,7 @@ hal config storage edit --type gcs
 hal deploy apply
 ```
  
-
+## Add GCS Artifact Support
 For creating pipelines, Spinnaker needs the ability to connect to GCS to pull Helm charts, YAML files.
 ```
 # service account from earlier
@@ -102,7 +103,7 @@ hal config artifact gcs enable
 hal deploy apply
 ```
   
-  
+## Google Pub/Sub Trigger with Google Cloud Build  
 Now Pipleines should be trigger builds whenever a Cloud Build was complete.
 ```
 #!/usr/bin/env bash
