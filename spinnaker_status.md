@@ -61,7 +61,7 @@ hal config deploy edit --type distributed --account-name $ACCOUNT
 ```
   
 ## Enable Google Cloud Storage  
-Spinnaker does not provide persistent Storage persistence storage so it needs to be set up
+Spinnaker does not provide persistence storage so it needs to be set up
 Create another Service Account that includes permissions to edit Google Cloud Storage buckets and then enable GCS.
 
 ```
