@@ -465,24 +465,18 @@ echo "done editing cloud build"
 Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger pipelines.
 
 ## Dashboard
-To open the Dashboard make sure Hallyard is deployed and you are connected to it
+To open the Dashboard make sure Hallyard is deployed and you are connected to it. This exposes Spinnaker on port 8080.
  ```
 hal deploy apply
 hal deploy connect
  ```
- Afterwards Spinnaker is exposed on port 8080.
  
- Open the CLI
+ Now open the CLI  and start a preview
  
- ![image](https://user-images.githubusercontent.com/95210174/150669581-b0f9c78a-6bd0-4210-bab6-ec716f518ed9.png)
- 
- And start a preview
- 
+ ![image](https://user-images.githubusercontent.com/95210174/150669581-b0f9c78a-6bd0-4210-bab6-ec716f518ed9.png) 
  ![image](https://user-images.githubusercontent.com/95210174/150669604-b9e9928f-3a74-4846-9bcf-e15606f57c5a.png)
 
 
- 
- hal deploy apply
 ## Workflow:
 - Commit on main branch 
 - CI
