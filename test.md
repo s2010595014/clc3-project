@@ -316,7 +316,7 @@ steps:
 ```
 
 For further Information please visit 
-https://cloud.google.com/build/docs/build-config-file-schema
+https://cloud.google.com/build/docs/automating-builds/build-repos-from-github
   
   
 ## Setup Spinnaker
