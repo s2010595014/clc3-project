@@ -27,7 +27,7 @@ stage we will check which release strategies the tools provide and use the same 
     - huge amount of possibilities - a lot to figure out by yourself
   - Github
   
-## Architecture
+## Spinnaker vs Tekton
 ### Spinnaker
 Spinnaker is an open source Continuous Deployment tool that natively
 supports deploying applications to major cloud providers like GCP, AWS,
