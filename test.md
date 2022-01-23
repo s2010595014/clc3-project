@@ -16,15 +16,7 @@ stage we will check which release strategies the tools provide and use the same 
   - Google Cloud Plattform
   - Kubernetes
   - Spinnaker 
-    - is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence
-    - used rather with the GUI than with a CLI
-    - allows use with Azure, GCP, AWS, ...
-    - is no Build-Server - so third-party build tools are used
   - Tekton
-    - provides k8s-style resources for declaring CI/CD-style pipelines
-    - uses Tasks, Pipelines, TaskRuns, PipelineRuns and PipelineResources
-    - Pipelines consist of Tasks which contain Steps (basically Shell-Commands) 
-    - huge amount of possibilities - a lot to figure out by yourself
   - Github
   
 ## Spinnaker vs Tekton
