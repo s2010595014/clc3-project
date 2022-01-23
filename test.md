@@ -315,7 +315,7 @@ steps:
   args: ['build', '-t', 'gcr.io/my-project-id/myimage', '.']
 ```
 
-For futher Information pls visit 
+For further Information please visit 
 https://cloud.google.com/build/docs/build-config-file-schema
   
   
