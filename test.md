@@ -100,7 +100,7 @@ easy rollbacks.
   
 ![image](https://user-images.githubusercontent.com/81319477/146951000-22a390e6-b741-408d-baae-e5f035e35f52.png)
 
-## Application Deployment
+#### Application Deployment
 Spinnaker is used to perform the Continuous Deployment of an
 application through pipelines and stages. Pipelines consist of a sequence
 of actions, known as stages, that can be composed in any order. Stages in
@@ -122,22 +122,18 @@ A Stage in Spinnaker is a collection of sequential Tasks and composed Stages tha
 Task
 A Task in Spinnaker is an automatic function to perform in Spinnaker.
   
-  ### Tekton
+### Tekton
   
-  Tekton’s pipeline is designed to run on Kubernetes. It leverages
-  Kubernetes Custom Resource Definition (CRD), which is used to define
-  its components like pipelines, tasks, and so on.. CRD is a Kubernetes API
-  extension to create custom objects and use them like other Kubernetes
-  objects (such as pods, services, etc.). Once they are installed, Tekton
-  pipelines are accessible via the Kubernetes CLI (kubectl) and via API calls,
-  just like pods and other resources called in Kubernetes. These features
-  make Tekton well integrated with the overall Kubernetes system
+Tekton’s pipeline is designed to run on Kubernetes. It leverages
+Kubernetes Custom Resource Definition (CRD), which is used to define
+its components like pipelines, tasks, and so on.. CRD is a Kubernetes API
+extension to create custom objects and use them like other Kubernetes
+objects (such as pods, services, etc.). Once they are installed, Tekton
+pipelines are accessible via the Kubernetes CLI (kubectl) and via API calls,
+just like pods and other resources called in Kubernetes. These features
+ make Tekton well integrated with the overall Kubernetes system
   
-  
-  
-  
-  
-Tektons pipeline architercture:
+#### Architercture:
   
 Tekton is
 an open source framework especially designed for cloud-native CI/CD
@@ -166,7 +162,7 @@ building blocks (pipeline and task) of CI/CD workflow.
 management.
 - Dashboard: A web-based UI for pipeline management.
 
-## Tekton’s Pipeline Architecture
+#### Tekton’s Pipeline Architecture
 
 Tekton’s pipeline is designed to run on Kubernetes. It leverages
 Kubernetes Custom Resource Definition (CRD), which is used to define
