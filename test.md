@@ -249,7 +249,7 @@ We choose to work with spinnaker casue it sooooooooooooooooooooooooooooooooooooo
 
 
 
-## Setup Google Cloud Build for Git
+# Setup Google Cloud Build for Git
 To start things of we started with the CI and implemented Git/Jenkins and Google Cloud Build to have more options. Finally we settled on Google Cloud Build for our final solution.
 
 
@@ -319,7 +319,7 @@ For further Information please visit
 https://cloud.google.com/build/docs/automating-builds/build-repos-from-github
   
   
-## Setup Spinnaker
+# Setup Spinnaker
 
 ### Requirements
 GCP Account
