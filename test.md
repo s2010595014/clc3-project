@@ -5,7 +5,7 @@
 ## Project Description:
   - Implement a CI/CD pipeline
   
-In this Project We will comapare Spinnaker and Tekton CD pipelines and determine which tool works best for deploying an artifact into a two-stage environment. 
+In this Project we will comapare Spinnaker and Tekton CD pipelines and determine which tool works best for deploying an artifact into a two-stage environment. 
 The pipeline should be triggered by a git commit to the main branch. The next step should be the construction of a container which is tested in a development stage.
 After successfully testing the implementation in the dev stage the container gets released into the production stage. For the conversion from the dev stage to the production
 stage we will check which release strategies the tools provide and use the same strategy for each tool.
