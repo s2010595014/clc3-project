@@ -53,7 +53,7 @@ Amazon, and so on.
 supports many deployment strategies, including bluegreen, rolling updates, canary, and highlander with
 easy rollbacks.
   
- #### Architecture 
+### Architecture 
   
 - Deck: A browser-based UI and frontend service for
     Spinnaker.
@@ -100,7 +100,7 @@ easy rollbacks.
   
 ![image](https://user-images.githubusercontent.com/81319477/146951000-22a390e6-b741-408d-baae-e5f035e35f52.png)
 
-#### Application Deployment
+### Application Deployment
 Spinnaker is used to perform the Continuous Deployment of an
 application through pipelines and stages. Pipelines consist of a sequence
 of actions, known as stages, that can be composed in any order. Stages in
@@ -155,7 +155,7 @@ building blocks (pipeline and task) of CI/CD workflow.
 management.
 - Dashboard: A web-based UI for pipeline management.
 
-#### Architecture
+### Architecture
 
 ![image](https://user-images.githubusercontent.com/81319477/146953959-2adb5a0c-2869-4c0e-b2af-1cac8c625b56.png)
   
