@@ -250,7 +250,10 @@ We choose to work with spinnaker casue it sooooooooooooooooooooooooooooooooooooo
 
 
 ## Setup Google Cloud Build for Git
-A build config file contains instructions for Cloud Build to perform tasks based on your specifications. For example, your build config file can contain instructions to build, package, and push Docker images.
+To start things of we started with the CI and implemented Git/Jenkins and Google Cloud Build to have more options. Finally we settled on Google Cloud Build for our final solution.
+
+
+A build config file in Google Cloud Build contains instructions for Cloud Build to perform tasks based on your specifications. For example, your build config file can contain instructions to build, package, and push Docker images.
 
 ### Structure of a build config file
 A build config file has the following structure:
