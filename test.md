@@ -28,7 +28,7 @@ stage we will check which release strategies the tools provide and use the same 
   - Github
   
 ## Spinnaker vs Tekton
-### Spinnaker
+## Spinnaker
 Spinnaker is an open source Continuous Deployment tool that natively
 supports deploying applications to major cloud providers like GCP, AWS,
 and so on. Spinnaker was jointly developed by Google and Netflix to 
@@ -122,7 +122,7 @@ A Stage in Spinnaker is a collection of sequential Tasks and composed Stages tha
 Task
 A Task in Spinnaker is an automatic function to perform in Spinnaker.
   
-### Tekton
+## Tekton
   
 Tekton’s pipeline is designed to run on Kubernetes. It leverages
 Kubernetes Custom Resource Definition (CRD), which is used to define
@@ -155,7 +155,7 @@ building blocks (pipeline and task) of CI/CD workflow.
 management.
 - Dashboard: A web-based UI for pipeline management.
 
-#### Tekton’s Pipeline Architecture
+#### Architecture
 
 ![image](https://user-images.githubusercontent.com/81319477/146953959-2adb5a0c-2869-4c0e-b2af-1cac8c625b56.png)
   
