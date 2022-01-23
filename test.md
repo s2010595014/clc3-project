@@ -10,7 +10,7 @@ The pipeline should be triggered by a git commit to the main branch. The next st
 After successfully testing the implementation in the dev stage the container gets released into the production stage. For the conversion from the dev stage to the production
 stage we will check which release strategies the tools provide and use the same strategy for each tool.
 
-![image](https://user-images.githubusercontent.com/81319477/146958129-4aecda4a-e860-414d-a431-1a2034881d7e.png)
+![image](https://user-images.githubusercontent.com/95210174/150667998-73c6426f-c86a-499d-a3d2-09b1a4dc4986.png)
 
 ## Used Technologies:
   - Kubernetes
