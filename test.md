@@ -154,7 +154,6 @@ building blocks (pipeline and task) of CI/CD workflow.
 - CLI: A command-line interface for CI/CD workflow
 management.
 - Dashboard: A web-based UI for pipeline management.
-- 
 
 #### Tekton’s Pipeline Architecture
 
