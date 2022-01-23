@@ -131,9 +131,7 @@ extension to create custom objects and use them like other Kubernetes
 objects (such as pods, services, etc.). Once they are installed, Tekton
 pipelines are accessible via the Kubernetes CLI (kubectl) and via API calls,
 just like pods and other resources called in Kubernetes. These features
- make Tekton well integrated with the overall Kubernetes system
-  
-#### Architercture:
+make Tekton well integrated with the overall Kubernetes system
   
 Tekton is
 an open source framework especially designed for cloud-native CI/CD
@@ -147,11 +145,6 @@ developers to build, test, and deploy cloud-native, containerized
 applications across multiple cloud providers. Kubernetes environments
 include AWS Elastic Kubernetes Services, Google Kubernetes Service, and
 hybrid environments.
-  
-![image](https://user-images.githubusercontent.com/81319477/146953959-2adb5a0c-2869-4c0e-b2af-1cac8c625b56.png)
-  
-Tekton pipeline flow diagram:
-![image](https://user-images.githubusercontent.com/81319477/146955366-12c96acb-1bea-45fc-a02b-8dee15328add.png)
 
 
 Tekton has four core components:
@@ -161,8 +154,14 @@ building blocks (pipeline and task) of CI/CD workflow.
 - CLI: A command-line interface for CI/CD workflow
 management.
 - Dashboard: A web-based UI for pipeline management.
+- 
 
 #### Tekton’s Pipeline Architecture
+
+![image](https://user-images.githubusercontent.com/81319477/146953959-2adb5a0c-2869-4c0e-b2af-1cac8c625b56.png)
+  
+Tekton pipeline flow diagram:
+![image](https://user-images.githubusercontent.com/81319477/146955366-12c96acb-1bea-45fc-a02b-8dee15328add.png)
 
 Tekton’s pipeline is designed to run on Kubernetes. It leverages
 Kubernetes Custom Resource Definition (CRD), which is used to define
