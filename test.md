@@ -41,7 +41,6 @@ at https://github.com/spinnaker. Spinnaker does not support Continuous
 Integration; however, it provides integration with market leader CI tools
 like Jenkins.
 
-
 - Multi-cloud support: Spinnaker supports major cloud
 providers like Google, Amazon, and so on.
 - Continuous Delivery tool: Spinnaker is a Continuous
@@ -54,48 +53,48 @@ Amazon, and so on.
 supports many deployment strategies, including bluegreen, rolling updates, canary, and highlander with
 easy rollbacks.
   
+ #### Architecture 
   
-  
-   - Deck: A browser-based UI and frontend service for
+- Deck: A browser-based UI and frontend service for
     Spinnaker.
     
-   - Gate: An API gateway; all microservices of Spinnaker
+- Gate: An API gateway; all microservices of Spinnaker
    communicate with each other via this gateway.
     
-   - Orca: An orchestration engine responsible for all ad
+- Orca: An orchestration engine responsible for all ad
    hoc operations. This microservice is also responsible
    for persisting information about pipeline execution.
     
-   - CloudDriver: Responsible for establishing the
+- CloudDriver: Responsible for establishing the
    connection to cloud providers and caching all deployed
    resources. It is the main service for integration with
    cloud providers.
   
-  - Front50: Responsible for persisting metadata in
+- Front50: Responsible for persisting metadata in
   applications, pipelines, projects, and notifications.
   
-  - Rosco: Responsible for baking immutable VM images,
+- Rosco: Responsible for baking immutable VM images,
   such as GCE images, AWS AMI, and so on, that will be
   deployed to a specific cloud. It uses the Packer tool to
   create the VM images.
   
-  - Igor: Used to connect with CI tools like Jenkins or
+- Igor: Used to connect with CI tools like Jenkins or
   Travis CI. It allows Jenkins/Travis CI stages to be used
   in its own pipeline. Without this service, you could not
   integrate with any CI tool.
   
-  - Echo: Used for sending the notification through
+- Echo: Used for sending the notification through
   Slack, email, or SMS and responsible for all incoming
   WebHooks, like GitHub to Spinnaker.
   
-  - Fiat: Responsible for user authorization in Spinnaker.
+- Fiat: Responsible for user authorization in Spinnaker.
   It is used to query user permissions for application and
   service accounts.
   
-  - Kayenta: Responsible for automated canary analysis
+- Kayenta: Responsible for automated canary analysis
   for spinnaker.
   
-  - Halyard: A configuration service for Spinnaker
+- Halyard: A configuration service for Spinnaker
   that maintains the lifecycle of these services during
   Spinnaker startups, updates, and rollbacks.
   
