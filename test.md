@@ -6,9 +6,8 @@
   - Implement a CI/CD pipeline
   
 In this Project we will comapare Spinnaker and Tekton CD pipelines and determine which tool works best for deploying an artifact into a two-stage environment. 
-The pipeline should be triggered by a git commit to the main branch. The next step should be the construction of a container which is tested in a development stage.
-After successfully testing the implementation in the dev stage the container gets released into the production stage. For the conversion from the dev stage to the production
-stage we will check which release strategies the tools provide and use the same strategy for each tool.
+The pipeline should be triggered by a git commit to the main branch. The next step should be the construction of a container which is tested in the development stage.
+After successfully testing the implementation in the dev stage the container gets released into the production stage. For the conversion from the dev stage to the production stage we will check which release strategies the tools provide and use the same strategy for each tool.
 
 ![image](https://user-images.githubusercontent.com/95210174/150667998-73c6426f-c86a-499d-a3d2-09b1a4dc4986.png)
 
@@ -250,7 +249,7 @@ We choose to work with spinnaker casue it sooooooooooooooooooooooooooooooooooooo
 
 
 # Setup Google Cloud Build for Git
-To start things of we started with the CI and implemented Git/Jenkins and Google Cloud Build to have more options. Finally we settled on Google Cloud Build for our final solution.
+To start things of, we started with the CI and implemented Git/Jenkins and Google Cloud Build to have more options. Finally we settled on Google Cloud Build for our final solution.
 
 
 A build config file in Google Cloud Build contains instructions for Cloud Build to perform tasks based on your specifications. For example, your build config file can contain instructions to build, package, and push Docker images.
@@ -331,7 +330,7 @@ Spinnaker is the easiest way to release complicated pipelines with little-to-no 
 
 ## Install options
 There are a few different ways to install Spinnaker, the recommended way being with Halyard, and other options including Helm and deployment manager.
-As Halyard was recommended this option is used. Halyard installs easily and remotely connects to the cluster you are running Spinnaker.
+As Halyard was recommended this option is used. Halyard installs easily and remotely connects to the cluster you are running Spinnaker on.
 ```
 #get the lastest Halyard release
 curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
@@ -375,7 +374,7 @@ hal config provider kubernetes account add spinnaker-account --provider-version 
 hal config features edit --artifacts true
 ```  
   
-Now deploy Spinnaker to the Kubernetes cluster and and customize your installation.
+Now deploy Spinnaker to the Kubernetes cluster and customize your installation.
 ```
 # set the account to install spinnaker into
 $ACCOUNT=spinnaker-account
@@ -384,7 +383,7 @@ hal config deploy edit --type distributed --account-name $ACCOUNT
 ```
   
 ## Enable Google Cloud Storage  
-Spinnaker does not provide persistence storage so it needs to be set up.
+Spinnaker does not provide persistent storage so it needs to be set up.
 Create another Service Account that includes permissions to edit Google Cloud Storage buckets and then enable GCS.
 
 ```
@@ -462,7 +461,7 @@ hal deploy apply
 echo "done editing cloud build"
  ``` 
   
-Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger pipelines.
+Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger for pipelines.
 
 ## Dashboard
 To open the dashboard make sure Hallyard is deployed and you are connected to it. This exposes Spinnaker on port 8080.
@@ -511,17 +510,17 @@ hal deploy connect
   - Deployment production
     
 
-## Learned Lessons
+## Lessons Learned
 - Setting up Spinnaker is Difficult
   - Many ways to deploy Spinnaker
   - Spinnaker documentation hard to follow
-  - Myriad of diffeent accounts needed to work porperly (mostly not documented)
-  - Searching for infos about Spinnnaker proofes difficult, because of the shared name with sailing boats
-  - Spinnaker is no standalone application, it must be carefully embedded onto the systems it is running on
-  - It is important to choose the right service plan to be able to allocate needed recources
+  - Myriad of diffeent accounts needed for it to work porperly (mostly not documented)
+  - Searching for infos about Spinnnaker proves difficult, because of the shared name with sailing boats
+  - Spinnaker is not a standalone application, it must be carefully embedded into the systems it is running on
+  - It is important to choose the right service plan to be able to allocate the required resources
   - Connecting CI with CD can pose a major problem, prepare alternatives for you initial plan
-  - There are so much possibilies for differnet configuration in cloud-computing so you never will know everything about them.
-  - Hence the possibilities thers no single right answer to a problem, many bumpy roads lead to a usable deployment
+  - There are so much possibilities for differnet configurations in cloud-computing, so you never will know everything about them.
+  - Because of the possibilities there is no single right answer to a problem, many bumpy roads lead to a usable deployment
 - Getting Data to Spinnaker is difficult
 - Need Service Accounts for everything
 - Intended Implementations/Usages
