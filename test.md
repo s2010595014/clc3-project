@@ -243,7 +243,7 @@ trigger the task and pipeline immediately or at a specific time
   8. All
   9. All
 
-## Working on the Project
+# Working on the Project
 ## Why use Spinnaker instead of Tekton
 We choose to work with spinnaker casue it soooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo MUCH BETTER:
 
