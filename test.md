@@ -19,6 +19,7 @@ After successfully testing the implementation in the dev stage the container get
   - Github
   
 ## Spinnaker vs Tekton
+
 ## Spinnaker
 Spinnaker is an open source Continuous Deployment tool that natively
 supports deploying applications to major cloud providers like GCP, AWS,
@@ -244,7 +245,7 @@ trigger the task and pipeline immediately or at a specific time
 
 # Working on the Project
 ## Why use Spinnaker instead of Tekton
-We choose to work with spinnaker casue it soooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo MUCH BETTER:
+Due to time constraints as well as a more comprehensible and extensive documentation, we chose to work with Spinnaker over Tekton. Another point in favor of Spinnaker is its well designed UI.
 
 
 
