@@ -465,7 +465,7 @@ echo "done editing cloud build"
 Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger pipelines.
 
 ## Dashboard
-To open the Dashboard make sure Hallyard is deployed and you are connected to it. This exposes Spinnaker on port 8080.
+To open the dashboard make sure Hallyard is deployed and you are connected to it. This exposes Spinnaker on port 8080.
  ```
 hal deploy apply
 hal deploy connect
