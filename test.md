@@ -500,15 +500,15 @@ Now whenever Cloud Build completes a build the resulting pubsub message will be 
 
 ## Learned Lessons
 - Setting up Spinnaker is Difficult
-  - Many Ways to Deploy Spinnaker
-  - Spinnaker Documentation hard to follow
-  - Myriad of Differnet Accounts needed to work porperly
-  - Searching for infos about Spinnnaker difficult because of the shared name with sailing boats
+  - Many ways to deploy Spinnaker
+  - Spinnaker documentation hard to follow
+  - Myriad of diffeent accounts needed to work porperly (mostly not documented)
+  - Searching for infos about Spinnnaker proofes difficult, because of the shared name with sailing boats
   - Spinnaker is no standalone application, it must be carefully embedded onto the systems it is running on
   - It is important to choose the right service plan to be able to allocate needed recources
   - Connecting CI with CD can pose a major problem, prepare alternatives for you initial plan
   - There are so much possibilies for differnet configuration in cloud-computing so you never will know everything about them.
-  - Hence the possibilities thers no single right answer to a problem, many bumpy roads lead to a usable Deployment
+  - Hence the possibilities thers no single right answer to a problem, many bumpy roads lead to a usable deployment
 - Getting Data to Spinnaker is difficult
 - Need Service Accounts for everything
 - Intended Implementations/Usages
