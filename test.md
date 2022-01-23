@@ -244,14 +244,15 @@ trigger the task and pipeline immediately or at a specific time
   9. All
 
 ## Working on the Project
-##Why use Spinnaker instead of Tekton
+## Why use Spinnaker instead of Tekton
+We choose to work with spinnaker casue it soooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo MUCH BETTER:
 
 
 
-# Setup Google Cloud Build for Git
+## Setup Google Cloud Build for Git
 A build config file contains instructions for Cloud Build to perform tasks based on your specifications. For example, your build config file can contain instructions to build, package, and push Docker images.
 
-## Structure of a build config file
+### Structure of a build config file
 A build config file has the following structure:
 ```
 steps:
@@ -294,7 +295,7 @@ images:
 - [string, string, ...]
 ```
 
-## Build steps
+### Build steps
 A build step specifies an action that you want Cloud Build to perform. For each build step, Cloud Build executes a docker container as an instance of docker run. Build steps are analogous to commands in a script and provide you with the flexibility of executing arbitrary instructions in your build. If you can package a build tool into a container, Cloud Build can execute it as part of your build. By default, Cloud Build executes all steps of a build serially on the same machine. If you have steps that can run concurrently, use the waitFor option.
 
 You can include up to 100 build steps in your config file.
@@ -315,9 +316,9 @@ For futher Information pls visit
 https://cloud.google.com/build/docs/build-config-file-schema
   
   
-# Setup Spinnaker
+## Setup Spinnaker
 
-## Requirements
+### Requirements
 GCP Account
 
 A ready to use GKE Cluster
@@ -414,7 +415,7 @@ hal config storage edit --type gcs
 hal deploy apply
 ```
  
-## Add GCS Artifact Support
+### Add GCS Artifact Support
 For creating pipelines, Spinnaker needs the ability to connect to GCS to pull Helm charts and YAML files.
 ```
 # service account from earlier
@@ -431,7 +432,7 @@ hal config artifact gcs enable
 hal deploy apply
 ```
   
-## Google Pub/Sub Trigger with Google Cloud Build  
+### Google Pub/Sub Trigger with Google Cloud Build  
 Now Pipleines should trigger builds whenever a Cloud Build was complete.
 ```
 #!/usr/bin/env bash
@@ -460,7 +461,7 @@ echo "done editing cloud build"
   
 Now whenever Cloud Build completes a build the resulting pubsub message will be picked up by Spinnaker and can be used as a trigger pipelines.
   
-# Workflow:
+## Workflow:
 - Commit on main branch 
 - CI
   - Trigger on Google Cloud Build 
@@ -482,7 +483,7 @@ Now whenever Cloud Build completes a build the resulting pubsub message will be 
 - Replicas Updated with Recreate strategy 
   (instead of Rollout/Ramped because of demo)
 
-# Requirements:
+## Requirements:
 - Github Account
 - Dockerhub Account
 - GCP Account
@@ -494,7 +495,7 @@ Now whenever Cloud Build completes a build the resulting pubsub message will be 
   - Deployment production
     
 
-# Learned Lessons: 
+## Learned Lessons: 
 - Getting Data to Spinnaker is difficult
 - Need Service Accounts for everything
 - Intended Implementations/Usages
